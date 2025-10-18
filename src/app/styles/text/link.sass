@@ -1,0 +1,19 @@
+@use "../vars" as *
+
+.active
+  cursor: pointer !important
+  &:active
+    opacity: 0.7
+
+a
+  color: $primary
+  text-decoration: none
+  @extend .active
+
+.link
+  @extend .active
+  &:hover
+    text-decoration: underline
+
+//i
+//  @extend .active

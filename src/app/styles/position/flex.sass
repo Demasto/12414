@@ -1,0 +1,107 @@
+.flex-row
+  display: flex
+  flex-direction: row !important
+
+.flex-col
+  display: flex
+  flex-direction: column !important
+
+.flex-center
+  @extend .flex-row
+  justify-content: center
+  align-items: center
+
+.flex-col-center
+  @extend .flex-col
+  justify-content: center
+
+.flex-row-center
+  @extend .flex-row
+  align-items: center
+
+
+.flex-wrap
+  flex-wrap: wrap !important
+
+.flex-nowrap
+  flex-wrap: nowrap !important
+
+.flex-wrap-reverse
+  flex-wrap: wrap-reverse !important
+
+.justify-start
+  justify-content: flex-start !important
+
+.justify-end
+  justify-content: flex-end !important
+
+.justify-center
+  justify-content: center !important
+
+
+// default space
+.justify-space
+  justify-content: space-between !important
+
+.justify-space-between
+  justify-content: space-between !important
+
+.justify-space-around
+  justify-content: space-around !important
+
+.justify-space-evenly
+  justify-content: space-evenly !important
+
+.align-start
+  align-items: flex-start !important
+
+.align-end
+  align-items: flex-end !important
+
+.align-center
+  align-items: center !important
+
+.align-baseline
+  align-items: baseline !important
+
+.align-stretch
+  align-items: stretch !important
+
+// auto
+.flex-1-1
+  flex: 1 1 auto !important
+.flex-1-0
+  flex: 1 0 auto !important
+.flex-0-1
+  flex: 0 1 auto !important
+.flex-0-0
+  flex: 0 0 auto !important
+
+// 100%
+.flex-1-1-100
+  flex: 1 1 100% !important
+.flex-1-0-100
+  flex: 1 0 100% !important
+.flex-0-1-100
+  flex: 0 1 100% !important
+.flex-0-0-100
+  flex: 0 0 100% !important
+
+// 0%
+.flex-1-1-0
+  flex: 1 1 0 !important
+.flex-1-0-0
+  flex: 1 0 0 !important
+.flex-0-1-0
+  flex: 0 1 0 !important
+.flex-0-0-0
+  flex: 0 0 0 !important
+
+// ga-n = n * 4 px
+.ga-0
+  gap: 0 !important
+
+$gaps: 1 2 3 4 5 6 7 8 9 10
+@each $g in $gaps
+  .ga-#{$g}
+    gap: #{$g * 4}px !important

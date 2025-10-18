@@ -1,0 +1,19 @@
+.text-overflow
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+@mixin line-clamp($n)
+  overflow: hidden
+  white-space: wrap
+  display: -webkit-box
+  line-clamp: $n
+  -webkit-line-clamp: $n /* number of lines to show */
+  -webkit-box-orient: vertical
+
+
+.line-clamp-2
+  @include line-clamp(2)
+
+.line-clamp-5
+  @include line-clamp(5)

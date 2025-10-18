@@ -1,0 +1,35 @@
+@use "vars" as *
+
+.scroll
+  overflow-y: scroll
+  &::-webkit-scrollbar 
+    width: 10px /* Ширина всего элемента навигации */
+
+
+  &::-webkit-scrollbar-track 
+    background: $gray-0 /* Цвет дорожки */
+    border-radius: 10px /* Округление бегунка */
+
+
+  &::-webkit-scrollbar-thumb 
+    background-color: $primary /* Цвет бегунка */
+    border-radius: 10px /* Округление бегунка */
+    padding-right: 20px
+
+
+
+.scroll-x 
+  overflow-x: scroll
+  &::-webkit-scrollbar 
+    height: 8px /* Ширина всего элемента навигации */
+
+
+  &::-webkit-scrollbar-track 
+    background: $gray /* Цвет дорожки */
+    border-radius: 0 /* Округление бегунка */
+
+
+  &::-webkit-scrollbar-thumb 
+    background-color: $primary /* Цвет бегунка */
+    border-radius: 0 /* Округление бегунка */
+

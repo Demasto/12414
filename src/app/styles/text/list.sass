@@ -1,0 +1,32 @@
+@use '../vars' as *
+
+ul
+  list-style-type: square
+  list-style-position: outside
+  padding-top: 10px
+  li
+    margin-left: 20px
+  li:not(:last-child)
+    margin-bottom: 10px
+  li::marker
+    padding: 0
+    color: $primary
+    font-size: 18px
+
+ol
+  list-style: none
+  counter-reset: li
+  li:first-child
+    margin-top: 10px
+  li:not(:last-child)
+    margin-bottom: 10px
+  li:before
+    counter-increment: li
+    content: counters(li,". ") "."
+    margin-right: 16px
+
+ol ol
+  margin-left: 40px
+
+li h3, li h4
+  display: inline

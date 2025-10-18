@@ -1,0 +1,54 @@
+@use "vars" as *
+
+::-webkit-scrollbar /* chrome based */
+    width: 0px  /* ширина scrollbar'a */
+    background: transparent  /* опционально */
+
+html
+  line-height: 1.5
+  overflow-x: hidden
+  overflow-y: auto
+  -ms-overflow-style: none  /* IE 10+ */
+  scrollbar-width: none /* Firefox */
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  margin: 0
+  padding: 0
+
+body
+  font-family: $font-family
+  font-size: 1rem
+  color: $black-1
+  transition: color 0.5s, background-color 0.5s
+  margin: 0
+  padding: 0
+
+a,button
+  outline: 1px solid transparent
+  transition: color 0.5s, background-color 0.5s, opacity 0.2s
+  &:focus-visible
+    outline: 1px solid $primary !important
+  &:focus
+    outline: none
+
+
+input
+  border: none
+  color: $black-1 !important
+  &:active
+    opacity: 0.7
+
+textarea
+  border: none
+
+code
+  background-color: #efefef
+  padding: 0.6rem
+  border-radius: 0.6rem
+
+em
+  font-weight: bold
+
+small
+  color: $gray-5
