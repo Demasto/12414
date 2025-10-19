@@ -30,44 +30,9 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/about': RouteRecordInfo<
-      '/about',
-      '/about',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/dashboard': RouteRecordInfo<
-      '/dashboard',
-      '/dashboard',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
     '/industry': RouteRecordInfo<
       '/industry',
       '/industry',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/map': RouteRecordInfo<
-      '/map',
-      '/map',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/products': RouteRecordInfo<
-      '/products',
-      '/products',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/test': RouteRecordInfo<
-      '/test',
-      '/test',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -91,39 +56,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/about.vue': {
-      routes:
-        | '/about'
-      views:
-        | never
-    }
-    'src/pages/dashboard.vue': {
-      routes:
-        | '/dashboard'
-      views:
-        | never
-    }
     'src/pages/industry.vue': {
       routes:
         | '/industry'
-      views:
-        | never
-    }
-    'src/pages/map.vue': {
-      routes:
-        | '/map'
-      views:
-        | never
-    }
-    'src/pages/products.vue': {
-      routes:
-        | '/products'
-      views:
-        | never
-    }
-    'src/pages/test.vue': {
-      routes:
-        | '/test'
       views:
         | never
     }
