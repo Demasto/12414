@@ -24,7 +24,7 @@ async function send() {
 
 <template>
   <section class="card">
-    <h3>ИИ &ndash; агент</h3>
+    <h3 class="flex-row align-center ga-2">ИИ &ndash; агент <v-icon icon="mdi-robot" color="primary"/></h3>
     <small class="mb_20" style="display: block;">Сформулируйте вопрос по товару. ИИ &ndash; агент постарается вам помочь</small>
 <!--    <v-text-field  variant="filled" append-icon="mdi-send" :clearable="false"/>-->
     <v-textarea v-model="text" :disabled="loading" label="Ваш вопрос" rows="7" base-color="primary" color="primary" no-resize hide-spin-buttons append-icon="mdi-send" icon-color="primary" @click:append="send"/>

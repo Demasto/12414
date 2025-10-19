@@ -3,8 +3,10 @@
 </script>
 
 <template>
-  <h1>Отрасли</h1>
+  <h1>Формирование обращения</h1>
+  <section class="card">
 
+  </section>
 </template>
 
 <style scoped>

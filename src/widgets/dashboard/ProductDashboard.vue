@@ -28,8 +28,12 @@ defineProps<{
       <v-col>
         <product-code :name="info.good.name" :code="info.good.hs_code"/>
       </v-col>
+
+    </v-row>
+
+    <v-row>
       <v-col>
-        <recommendation :text="info.measures.join(', ')"/>
+        <recommendation :info="info"/>
       </v-col>
     </v-row>
 
@@ -69,12 +73,6 @@ defineProps<{
     <v-row>
       <v-col>
         <chat  :id="info.good.id"/>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <json-about :json="info.flags"/>
       </v-col>
     </v-row>
 

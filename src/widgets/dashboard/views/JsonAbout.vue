@@ -6,7 +6,7 @@ defineProps<{json: object}>()
 
   <section class="card">
     <h3>Метрика обоснования выбора</h3>
-    <pre><code>{{json}}</code></pre>
+<!--    <pre><code>{{json}}</code></pre>-->
 
     Нормативные флаги:
     <ul>

@@ -1,31 +1,32 @@
 <script setup lang="ts">
 
 const navItems = [
-  {
-    title: 'Статистика',
-    icon: 'mdi-finance',
-    path: '/',
-  },
+  // {
+  //   title: 'Статистика',
+  //   icon: 'mdi-finance',
+  //   path: '/',
+  // },
   // {
   //   title: 'Карта мира',
   //   icon: 'mdi-map-marker-radius',
   //   path: '/map',
   // },
+
   {
-    title: 'Отрасли',
+    title: 'ЕАИС',
+    icon: 'mdi-list-box-outline',
+    path: '/',
+  },
+  {
+    title: 'Формирование обращения',
     icon: 'mdi-factory',
     path: '/industry',
   },
-  {
-    title: 'Товары',
-    icon: 'mdi-list-box-outline',
-    path: '/products',
-  },
-  {
-    title: 'О проекте',
-    icon: 'mdi-information-variant',
-    path: '/about',
-  },
+  // {
+  //   title: 'О проекте',
+  //   icon: 'mdi-information-variant',
+  //   path: '/about',
+  // },
 ]
 
 </script>

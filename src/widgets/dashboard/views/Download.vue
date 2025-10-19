@@ -12,7 +12,14 @@ const {id} = defineProps<{id: string}>()
       <v-btn variant="elevated" :href="`/api/goods/${id}/report.docx`" prepend-icon="mdi-download" size="x-large">Справка по товару</v-btn>
     </div>
     <div>
-      <h3>Сформировать обращение </h3>
+      <h3>Сформировать обращение
+        <v-tooltip open-on-hover location="top">
+          <template v-slot:activator="{props}">
+            <v-icon v-bind="props" icon="mdi-tooltip-question-outline" class="ml_5" color="primary"></v-icon>
+          </template>
+          Обращение будет сформировано с помощью искусственного интеллекта
+        </v-tooltip>
+      </h3>
       <v-btn prepend-icon="mdi-download" :href="`/api/goods/${id}/mosprom-letter.docx`" size="x-large" variant="outlined">Обращение в Моспром</v-btn>
     </div>
   </div>
