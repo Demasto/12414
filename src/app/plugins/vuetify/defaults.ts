@@ -4,13 +4,13 @@ export const defaults = {
     },
     VTextField: {
         color: 'primary',
-        // variant: 'outlined',
-        // baseColor: 'primary',
+        variant: 'underlined',
+        baseColor: 'primary',
         // bgColor: '#FFFFFF',
+        density: 'compact',
         iconColor: 'primary',
         clearable: true,
         validateOn: 'invalid-input',
-        persistentPlaceholder: true
     },
     VTextarea: {
         color: 'primary',
@@ -57,7 +57,6 @@ export const defaults = {
         color: 'primary',
         baseColor: 'primary',
         iconColor: 'primary',
-        hideDetails: true
     },
     VChip: {
         color: 'primary',
