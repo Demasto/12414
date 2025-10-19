@@ -5,9 +5,22 @@ This template should help get you started developing with Vue 3 and TypeScript i
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
 
-# Система мер ТТР — репозиторий (backend)
+# Система мер ТТР — репозиторий
 
-## Структура
+## Структура (backend)
+- `backend/app.py` — Streamlit-интерфейс (дашборд, карта, чат, выгрузки PDF/DOCX).
+- `backend/api.py` — FastAPI REST API для фронтенда (список товаров, данные, чат, формирование документов).
+- `backend/logic.py` — бизнес-логика (алгоритм выбора мер, промты, вспомогательные функции).
+- `backend/ingest_pdfs.py` — создание RAG-индекса из PDF/XLSX (кладёт файлы в `knowledge/index`).
+- `knowledge/pdf/` — исходные документы для индексирования.
+- `knowledge/index/` — индекс RAG: `records.json`, `embeddings.npy`.
+- `parser.py`, `parse_economy_news_to_pdf.py` — вспомогательные парсеры/скрипты.
+
+
+## Структура (Frontend)
+
+Приложение построено с использованием Vue 3 + TypeScript + Vite
+
 - `backend/app.py` — Streamlit-интерфейс (дашборд, карта, чат, выгрузки PDF/DOCX).
 - `backend/api.py` — FastAPI REST API для фронтенда (список товаров, данные, чат, формирование документов).
 - `backend/logic.py` — бизнес-логика (алгоритм выбора мер, промты, вспомогательные функции).

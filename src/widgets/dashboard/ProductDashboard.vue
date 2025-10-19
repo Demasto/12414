@@ -14,7 +14,6 @@ import type {ProductInfo} from "@/services/goods/GoodsAPI.ts";
 import MapImport from "@/widgets/dashboard/views/MapImport.vue";
 import Download from "@/widgets/dashboard/views/Download.vue";
 import Chat from "@/widgets/dashboard/views/Chat.vue";
-import JsonAbout from "@/widgets/dashboard/views/JsonAbout.vue";
 
 defineProps<{
   info: ProductInfo

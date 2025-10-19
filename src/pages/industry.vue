@@ -26,7 +26,9 @@ function onSend() {
     showResult.value = true
   }, 1000)
 }
-
+function flag(f: boolean) {
+  return f ? 'Да' : 'Нет'
+}
 </script>
 
 <template>
@@ -47,15 +49,41 @@ function onSend() {
     <v-select label="Тема обращения" density="compact" variant="underlined" :items="['Жалоба', 'Предложение', 'Вопрос', 'Другое']"/>
 
     <v-text-field label="Суть обращения"  />
-    <v-text-field label="Обоснование меры"  />
+
+
 
     <div class="flex-row ga-6 ">
       <v-text-field label="Email"/>
       <v-text-field label="Телефон"/>
     </div>
 
+    <h3>Обоснование меры</h3>
+
+    <ul class="mb_20" :key="dashboard.summary.delta_ns">
+      <li>Год анализа: {{dashboard.summary.last_year}}</li>
+      <li>Доля НС: {{dashboard.summary.share_ns.toFixed(1)}}%</li>
+      <li>Изменение поставок НС к прошлому году: {{dashboard.summary.delta_ns.toFixed(1)}}</li>
+      <!--      <li>Производство vs потребление: {{flag(info.summary.prod_ge_cons)}}</li>-->
+      <!--      <li>Тарифы: {{info.summary.applied * 100}}%</li>-->
+      <!--      <li>ВТО: {{info.summary.wto_bound * 100}}%</li>-->
+      <!--      <li>Метрика расчёта импорта: {{info.summary.metric_used}}</li>-->
+      <!--      <li>Логика выбора по методике: {{info.summary.branch}}</li>-->
+
+      <li>техрег/сертификация: {{flag(dashboard.flags[0]?.sin_techreg)}}</li>
+      <li>в перечне ПП № 1875: {{flag(dashboard.flags[0]?.in_pp1875)}}</li>
+      <li>в приказе № 4114: {{flag(dashboard.flags[0]?.in_order4114)}}</li>
+
+      <li>
+        {{dashboard.summary.notes.join(', ')}}
+      </li>
+    </ul>
+
     <div class="flex-row justify-end">
-      <v-btn size="x-large" variant="outlined" v-if="showSend && !showResult" @click="onSend" :loading="sendLoading">Сформировать обращение</v-btn>
+      <div v-if="showSend && !showResult">
+        🟢 Полнота: 92 %  🟡 Релевантность: ТТР
+
+        <v-btn size="x-large" variant="outlined" class="ml_15"  @click="onSend" :loading="sendLoading">Сформировать обращение</v-btn>
+      </div>
 
       <div v-else-if="showResult" class="card" style="width: 100%;">
         <h3>Ваш запрос отправлен!</h3>
@@ -68,5 +96,8 @@ function onSend() {
 </template>
 
 <style scoped>
+ul {
+  padding: 0
+}
 
 </style>
